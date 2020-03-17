@@ -7,6 +7,7 @@ CONTACT pbardolia@albany.edu'''
 #IMPORTS
 import sys
 
+#ONE-TO-ONE
 def oneToOne(string1, string2):
 	#CONDITION ONE
 	#NO OF ELEMENTS IN DOMAIN SHOULD BE LESS THAN OR EQUAL TO NO OF CODOMAIN
@@ -21,7 +22,6 @@ def oneToOne(string1, string2):
 			#CREATE HASHMAP
 			if string1[i] not in hashMap:
 				hashMap[string1[i]]= string2[i]
-				print(hashMap)
 			else:
 				#NOT MAPPED TO SAME ELEMENT				
 				if hashMap[string1[i]] != string2[i]:
