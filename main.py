@@ -13,8 +13,21 @@ def oneToOne(string1, string2):
 	#RETURNS FALSE IF LENGTH(STRING1)> LENGTH(STRING2)
 	if len(string1)> len(string2):
 		return "false"
+	#CHECK IF BOTH THE STRINGS HAVE SINGLE ONE TO ONE RELATION	
 	else:
-		return "true"
+		hashMap= dict()
+		i=0
+		while i< len(string1):
+			#CREATE HASHMAP
+			if string1[i] not in hashMap:
+				hashMap[string1[i]]= string2[i]
+				print(hashMap)
+			else:
+				#NOT MAPPED TO SAME ELEMENT				
+				if hashMap[string1[i]] != string2[i]:
+					return "false"
+			i=i+1
+	return "true"
 
 #MAIN
 def main():
